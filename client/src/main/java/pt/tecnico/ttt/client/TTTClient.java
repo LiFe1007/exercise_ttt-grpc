@@ -100,8 +100,8 @@ public class TTTClient {
 
 					// TODO call play and set the proper play result
 					
-					tttgame.PlayRequest request = tttgame.PlayRequest.newBuilder().setRow(row).setColumn(column).setPlayer(player).build();
-					tttgame.PlayResponse response = stub.play(request);
+					ttt.PlayRequest request = ttt.PlayRequest.newBuilder().setRow(row).setColumn(column).setPlayer(player).build();
+					ttt.PlayResponse response = stub.play(request);
 					
 					play_res = response;
 					if (play_res != PlayResult.SUCCESS) {
@@ -111,8 +111,8 @@ public class TTTClient {
 				} while (play_res != PlayResult.SUCCESS);
 
 				// TODO call check winner and set the winning player.
-				tttgame.CheckWinnerRequest request1 = tttgame.CheckWinnerRequest.newBuilder().build();
-				tttgame.CheckWinnerResponse response1 = stub.checkWinner(request1);
+				ttt.CheckWinnerRequest request1 = ttt.CheckWinnerRequest.newBuilder().build();
+				ttt.CheckWinnerResponse response1 = stub.checkWinner(request1);
 				winner= response1;
 				
 				/* Select next player. */
