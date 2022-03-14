@@ -47,7 +47,7 @@ message CheckWinnerRequest {
 }
 
 message CheckWinnerResponse {
-	int winner = 1;
+	int32 winner = 1;
 }
 // TODO
 
