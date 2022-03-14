@@ -3,8 +3,6 @@ package pt.tecnico.ttt.client;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import pt.tecnico.ttt.*;
-import pt.tecnico.ttt.tttgame;
-import pt.tecnico.ttt.tttgameServiceGrpc;
 import pt.tecnico.ttt.PlayResult;
 
 import java.util.Scanner;
@@ -102,8 +100,8 @@ public class TTTClient {
 
 					// TODO call play and set the proper play result
 					
-					tttgame.PlayRequest request = tttgame.PlayRequest.newBuilder().setRow(row).setColumn(column).setPlayer(player).build();
-					tttgame.PlayResponse response = stub.play(request);
+					TTT.PlayRequest request = TTT.PlayRequest.newBuilder().setRow(row).setColumn(column).setPlayer(player).build();
+					TTT.PlayResponse response = stub.play(request);
 					
 					play_res = response;
 					if (play_res != PlayResult.SUCCESS) {
@@ -113,8 +111,8 @@ public class TTTClient {
 				} while (play_res != PlayResult.SUCCESS);
 
 				// TODO call check winner and set the winning player.
-				tttgame.CheckWinnerRequest request1 = tttgame.CheckWinnerRequest.newBuilder().build();
-				tttgame.CheckWinnerResponse response1 = stub.checkWinner(request1);
+				TTT.CheckWinnerRequest request1 = TTT.CheckWinnerRequest.newBuilder().build();
+				TTT.CheckWinnerResponse response1 = stub.checkWinner(request1);
 				winner= response1;
 				
 				/* Select next player. */
