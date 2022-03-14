@@ -3,6 +3,8 @@ package pt.tecnico.ttt.client;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import pt.tecnico.ttt.*;
+import pt.tecnico.ttt.tttgame;
+import pt.tecnico.ttt.tttgameServiceGrpc;
 import pt.tecnico.ttt.PlayResult;
 
 import java.util.Scanner;
