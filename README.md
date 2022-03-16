@@ -8,7 +8,7 @@ The project is composed by three modules:
 - [client](client/) - invocation of service
 
 See the README for each module.  
-Start at contract, then go to server, and finally go to the client. 
+Start at contract, then go to server, and finally go to the client.
 
 
 ----
